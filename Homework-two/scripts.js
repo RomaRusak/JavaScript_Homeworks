@@ -83,7 +83,54 @@ if (day >=1 && day <= 31) {
 } else {
     console.log('вы ввели неверное число')
 }
-
 */
+//Задача 9
+
+let days = prompt('введите колличество дней');
+let years = days / 365,
+    month = days / 31,
+    weeks = days / 7,
+    hours = days * 24,
+    minutes = days * 1440,
+    seconds = days * 86400;
+
+if (days < 0) {
+    console.log('вы ввели отрицательное число');
+} else if (days == 0) {
+    console.log('вы ввели ноль');
+} else {
+    if (days >= 365) {
+        console.log('это составит ' + years + ' года' )
+    } else {
+        console.log('Меньше года')
+    }
+    if (days >= 31) {
+        console.log('это составит ' + month + ' месяца')
+    } else {
+        console.log('Меньше месяца')
+    }
+    if (days >= 7) {
+        console.log('это составит ' + weeks + ' недели')
+    } else {
+        console.log('Меньше недели')
+    }
+    if (days >= 0.0416) {
+        console.log('это составит ' + hours + ' часов')
+    } else {
+        console.log('Меньше часа')
+    }
+    if (days >= 0.000694) {
+        console.log('это составит ' + minutes + ' минут')
+    } else {
+        console.log('Меньше минуты')
+    }
+    if (days >= 0.00001157407)  {
+        console.log ('это составит ' + seconds + ' секунд')
+    } else {
+        console.log('не секунды')
+    }
+    
+
+}
 
 
