@@ -1,5 +1,5 @@
 //Задача 1
-/*
+
 let name = prompt('введите вашемя имя'),
     age = prompt('введите ваш возраст'),
     city = prompt('введите ваш город'),
@@ -83,7 +83,7 @@ if (day >=1 && day <= 31) {
 } else {
     console.log('вы ввели неверное число')
 }
-*/
+
 //Задача 9
 
 let days = prompt('введите колличество дней');
@@ -129,8 +129,175 @@ if (days < 0) {
     } else {
         console.log('не секунды')
     }
-    
-
 }
 
+//Задача 10
+let day10 = 454,
+    b10,
+    c10;
+
+if (day10 < 0) {
+    console.log('вы ввели отрицательное число')
+}
+
+else if (day10 == 0) {
+    console.log('вы ввели 0')
+}
+
+else if (day10 > 0 && day10 <= 365) {
+    if (day10 >= 1 && day10 <=31) {
+        c10 = 'январь'
+        console.log(c10);
+    } else if (day10 > 31 && day10 <= 59 ) {
+        c10 = 'февраль'
+        console.log(c10);
+    } else if (day10 > 59 && day10 <= 90) {
+        c10 = 'март'
+        console.log(c10);
+    } else if (day10 > 90 && day10 <= 120) {
+        c10 = 'апрель'
+        console.log(c10);
+    } else if (day10 >120 && day10 <= 151) {
+        c10 = 'май'
+        console.log(c10);
+    } else if (day10 > 151 && day10 <= 181) {
+        c10 = 'июнь'
+        console.log(c10);
+    } else if (day10 > 181 && day10 <= 212 ) {
+        c10 = 'июль'
+        console.log(c10);
+    } else if (day10 > 212 && day10 <= 243) {
+        c10 = 'август'
+        console.log(c10);
+    } else if (day10 > 243 && day10 <= 273) {
+        c10 = 'сентябрь'
+        console.log(c10)
+    } else if (day10 > 273 && day10 <= 304) {
+        c10 = 'октябрь'
+        console.log(c10)
+    } else if (day10 > 304 && day10 <= 334) {
+        c10 = 'ноябрь'
+        console.log(c10)
+    }  else {
+        c10 = 'декабрь'
+        console.log(c10)
+    }
+    switch(c10) {
+        case 'январь':
+            console.log('зима')
+        break
+        case 'февраль':
+            console.log('зима')
+        break
+        case 'март':
+            console.log('весна')
+        break
+        case 'апрель':
+            console.log('весна')
+        break
+        case 'май':
+            console.log('весна')
+        break
+        case 'июнь':
+            console.log('лето')
+        break
+        case 'июль':
+            console.log('лето')
+        break
+        case 'август':
+            console.log('лето')
+        break
+        case 'сентябрь':
+            console.log('осень')
+        break
+        case 'октябрь':
+            console.log('осень')
+        break
+        case 'ноябрь':
+            console.log('осень')
+        break
+        case 'декабрь':
+            console.log('зима')
+        break
+    } 
+}
+
+else {
+    b10 = ( day10 % 365);
+    if (b10 >= 1 && b10 <=31) {
+        c10 = 'январь'
+        console.log(c10);
+    } else if (b10 > 31 && b10 <= 59 ) {
+        c10 = 'февраль'
+        console.log(c10);
+    } else if (b10 > 59 && b10 <= 90) {
+        c10 = 'март'
+        console.log(c10);
+    } else if (b10 > 90 && b10 <= 120) {
+        c10 = 'апрель'
+        console.log(c10);
+    } else if (b10 >120 && b10 <= 151) {
+        c10 = 'май'
+        console.log(c10);
+    } else if (b10 > 151 && b10 <= 181) {
+        c10 = 'июнь'
+        console.log(c10);
+    } else if (b10 > 181 && b10 <= 212 ) {
+        c10 = 'июль'
+        console.log(c10);
+    } else if (b10 > 212 && b10 <= 243) {
+        c10 = 'август'
+        console.log(c10);
+    } else if (b10 > 243 && b10 <= 273) {
+        c10 = 'сентябрь'
+        console.log(c10)
+    } else if (b10 > 273 && b10 <= 304) {
+        c10 = 'октябрь'
+        console.log(c10)
+    } else if (b10 > 304 && b10 <= 334) {
+        c10 = 'ноябрь'
+        console.log(c10)
+    }  else {
+        c10 = 'декабрь'
+        console.log(c10)
+    }
+    switch(c10) {
+        case 'январь':
+            console.log('зима')
+        break
+        case 'февраль':
+            console.log('зима')
+        break
+        case 'март':
+            console.log('весна')
+        break
+        case 'апрель':
+            console.log('весна')
+        break
+        case 'май':
+            console.log('весна')
+        break
+        case 'июнь':
+            console.log('лето')
+        break
+        case 'июль':
+            console.log('лето')
+        break
+        case 'август':
+            console.log('лето')
+        break
+        case 'сентябрь':
+            console.log('осень')
+        break
+        case 'октябрь':
+            console.log('осень')
+        break
+        case 'ноябрь':
+            console.log('осень')
+        break
+        case 'декабрь':
+            console.log('зима')
+        break
+    }
+}
 
