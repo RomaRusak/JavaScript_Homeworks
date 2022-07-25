@@ -104,5 +104,27 @@ do {
 
 document.write('для этого потребуется ' + counter7 + ' итераций')
 
+document.write('<h2>Задача 8</h2 >') 
 
+let n10 = '88005553535',
+    rez10,
+    sum10 = 0,
+    j10 = n10.length-1,
+    reverseRez10,
+    reverseSum10 = '';
+
+for (i10 = 0; i10 < n10.length; i10++) {
+    document.write(n10[i10] + ' ');
+    rez10 = parseInt(n10[i10]);
+    sum10 += rez10;
+}
+
+for (j10; j10 >= 0; j10--) {
+    reverseRez10 = n10[j10];
+    reverseSum10 += reverseRez10;
+}
+document.write('<br>');
+document.write('Цифр в числе ' + n10.length + '<br>');
+document.write('Сумма ' + sum10 + '<br>');
+document.write('Обратный порядок ' + reverseSum10)
 
