@@ -104,7 +104,7 @@ do {
 
 document.write('для этого потребуется ' + counter7 + ' итераций')
 
-document.write('<h2>Задача 8</h2 >') 
+document.write('<h2>Задача 10</h2 >') 
 
 let n10 = '88005553535',
     rez10,
