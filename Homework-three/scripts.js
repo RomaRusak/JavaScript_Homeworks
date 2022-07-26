@@ -104,6 +104,29 @@ do {
 
 document.write('для этого потребуется ' + counter7 + ' итераций')
 
+document.write('<h2>Задача 8</h2 >') 
+
+let i8,
+    sum8 = 0,
+    counter8 = 0,
+    rezult8 = 0;
+
+while (i8 != 0) {
+        i8 = Number(prompt('введите число'));
+        if (i8 == NaN) {
+            console.log(i8, typeof i8)
+            continue
+        } else {
+            sum8 += i8;
+        }
+        counter8 += 1;
+}
+
+rezult8 = sum8 / counter8;
+document.write('Сумма введенных чисел = ' + sum8 + '<br>');
+document.write('Среднее арифметическое введенных чисел = ' + rezult8)
+
+
 document.write('<h2>Задача 10</h2 >') 
 
 let n10 = '88005553535',
