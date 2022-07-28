@@ -61,8 +61,12 @@ let arr5 = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс']
 let i5;
 
 for (i5 = 0; i5 < arr5.length; i5++) {
-    document.write(arr5[i5] + ' ');
-    //жирный шрифт
+    if (arr5[i5] == 'Сб' || arr5[i5] == 'Вс') {
+        let stringBold = arr5[i5];
+        document.write('<b>'+ stringBold +'</b>' + ' ');
+    } else{
+        document.write(arr5[i5] + ' ');
+    }
 }
 
 document.write('<h2>Задача 6 </h2>')
@@ -73,25 +77,25 @@ document.write(arr6[arr6.length - 1]);
 
 document.write('<h2>Задача 7 </h2>')
 
-// let arr7 = [];
-// let counter = 0;
+let arr7 = [];
+let counter7 = 0;
 
-// while(true) {
-//     let a = prompt('введи')
-//     if (a == '2') break 
-//     else {
-//         a = Number(a);
-//         if (isNaN(a)) {
-//             alert('ввели не число');
-//             continue;
-//         } else {
-//             arr7[counter] = a;
-//             counter++;
-//         }
-//     }
-// }
+while(true) {
+    let a = prompt('введи')
+    if (a == '2') break 
+    else {
+        a = Number(a);
+        if (isNaN(a)) {
+            alert('ввели не число');
+            continue;
+        } else {
+            arr7[counter7] = a;
+            counter7++;
+        }
+    }
+}
 
-// document.write(arr7);
+document.write(arr7);
 
 document.write('<h2>Задача 8 </h2>')
 
