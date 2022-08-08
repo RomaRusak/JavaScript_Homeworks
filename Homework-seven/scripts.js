@@ -1,3 +1,4 @@
+//записная книжка
 
 let Contacts = function(name) {
 
@@ -40,3 +41,51 @@ let contacts = new Contacts()
     contacts.check('Рома')
     contacts.contactWrite('Рома')
     contacts.allContactsWrite()
+
+// чайник 
+
+
+let kettle = {
+
+    swith: true,
+    switcher: function() {
+        this.swith = !this.swith
+    },
+
+    getInfo: function() {
+        if (this.swith == false) return 'чайник';
+        this.pStart = function() {
+          this.P = +prompt('введите мощность чайника')
+          if (isNaN(this.P) == true) return console.log('нечисловое значение'), this.pStart()
+          if (this.P == '') return console.log('вы ничего не ввели'), this.pStart()
+        }
+        this.pStart()
+
+        this.vStart = function() {
+            this.V = +prompt('введите объем чайника')
+            if (isNaN(this.V) == true) return console.log('нечисловое значение'), this.vStart()
+            if (this.V == '') return console.log('вы ничего не ввели'), this.vStart()
+        }
+        this.vStart()
+
+        this.waterStart = function() {
+            this.water = +prompt('введите колличество воды в чайнике')
+            if (isNaN(this.water) == true) return console.log('нечисловое значение'), this.waterStart()
+            if (this.water == '') return console.log('вы ничего не ввели'), this.waterStart()
+        }
+        this.waterStart()
+
+        this.count()
+    },
+
+    count: function() {
+        this.T = this.V * this.water / this.P;
+        this.show()
+    },
+
+    show: function() {
+        console.log('время закипания воды в чайнике составит: ' + this.T + ' секунд')
+    }
+}
+
+kettle.getInfo()
