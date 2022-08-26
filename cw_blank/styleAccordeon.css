@@ -1,0 +1,34 @@
+.accordeon-wrapper h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.accordeon-wrapper div {
+    width: 80%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 25px 0;
+}
+.accordeon-wrapper .accordeon-button {
+    border: 3px solid black;
+    box-sizing: border-box;
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.accordeon-wrapper .accordeon-content {
+   max-height: 0px;
+   overflow: hidden;
+   padding-top: 0;
+   padding-bottom: 0;
+   transition: .5s;
+}
+
+.accordeon-wrapper .active {
+    background-color: lightgray;
+}
+
+.accordeon-wrapper .active + .accordeon-content {
+    max-height: 130px;
+}
