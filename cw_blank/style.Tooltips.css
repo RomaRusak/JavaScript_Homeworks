@@ -1,0 +1,13 @@
+.tooltipsWrapper {
+    padding: 25px;
+}
+
+.tooltipsWrapper h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.tooltipsWrapper .tooltips-content-wrapper {
+    color: purple;
+    cursor: pointer;
+}
