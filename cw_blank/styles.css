@@ -10,6 +10,66 @@ body {
     background-color: #ededed;
 }
 
+/*-----------------------------------------------------------------*/
+
+.gallery__thumbs {
+    list-style: none;
+}
+
+.gallery__thumbs li img {
+    height: 150px;
+    width: 150px;
+    box-shadow: 1px 2px 2px black;
+}
+
+
+.gallery .gallery__thumbs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.gallery__preview {
+    height: 500px;
+    width: 500px;
+    margin: 0 auto;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.gallery__preview img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    box-shadow: 2px 2px 6px black;
+    transition: .5s .3s;
+}
+
+.gallery__preview .gallery__preview_close {
+    position: absolute;
+    z-index: 4;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 5px 10px;
+    border-radius: 30px;
+}
+
+.gallery {
+    min-height: 754.8px;
+}
+
+.gallery .hidden {
+    display: none;
+}
+
+
+/*-----------------------------------------------------------------*/
+
 .portfolio > .portfolio__filter {
     list-style: none;
     display: flex;
