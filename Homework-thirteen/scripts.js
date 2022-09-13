@@ -227,13 +227,13 @@ class ContactsUI extends Contacts {
 
             });
 
-            nameContent.addEventListener('keydown', e => self.onEdit(e, contact.id, nameContent, phoneContent, emailContent, addressContent));
+            nameContent.addEventListener('keydown', e => self.onEdit(e, contact.data.id, nameContent, phoneContent, emailContent, addressContent));
 
-            phoneContent.addEventListener('keydown', e => self.onEdit(e, contact.id, nameContent, phoneContent, emailContent, addressContent));
+            phoneContent.addEventListener('keydown', e => self.onEdit(e, contact.data.id, nameContent, phoneContent, emailContent, addressContent));
 
-            emailContent.addEventListener('keydown', e => self.onEdit(e, contact.id, nameContent, phoneContent, emailContent, addressContent));
+            emailContent.addEventListener('keydown', e => self.onEdit(e, contact.data.id, nameContent, phoneContent, emailContent, addressContent));
 
-            addressContent.addEventListener('keydown', e => self.onEdit(e, contact.id, nameContent, phoneContent, emailContent, addressContent));
+            addressContent.addEventListener('keydown', e => self.onEdit(e, contact.data.id, nameContent, phoneContent, emailContent, addressContent));
 
             elem.append(name, nameContent, phone, phoneContent, email, emailContent, address, addressContent, buttonRemove, buttonEdit);
             self.container.append(elem);
