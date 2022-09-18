@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.root {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.root .header {
+    min-height: 150px;
+    background-color:  lightgreen;
+    margin-bottom: 50px;
+}
+
+.navClass .cart-wrapper {
+    height: 200px;
+    position: fixed;
+    top: 5px;
+    right: 20px;
+}
+
+.navClass .cart-img {
+    height: 150px;
+    width: 150px;
+    background-image: url("https://cdn-icons-png.flaticon.com/512/1374/1374128.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.navClass .cart-counter,
+.navClass .cost-counter {
+    font-weight: bold;
+}
+
+.mainClass {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 400px);
+    grid-auto-rows: auto;
+    justify-content: center;
+    grid-gap: 20px;
+}
+
+.mainClass .active {
+    background-color: lightgreen;
+}
+
+.mainClass .wrapper {
+    box-sizing: border-box;
+    border: 3px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 10px 20px;
+    box-shadow: 1px 1px 2px black;
+}
+
+.mainClass .wrapper h2 {
+    font-size: 18px;
+    height: 80px;
+    text-align: center;
+   
+}
+
+.mainClass .wrapper .productDescription {
+    text-align: justify;
+}
+
+.mainClass .wrapper .productPice{
+    font-weight: bold;
+    text-align: center;
+}
+
+.mainClass .wrapper .productRating {
+    font-weight: bold;
+    text-align: center;
+}
+
+.mainClass  img {
+    height: 200px;
+    width: 200px;
+}
+
+.mainClass .buttonWrapper {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.mainClass .buttonWrapper button {
+    padding: 5px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px black;
+    border-radius: 15%;
+}
+
+.root .footer {
+    min-height: 150px;
+    background-color:  lightgreen;
+    margin-top: 50px;
+}
+
