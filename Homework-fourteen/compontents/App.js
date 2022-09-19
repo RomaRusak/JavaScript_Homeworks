@@ -14,7 +14,7 @@ export default class App {
     }
 
     async getDate() {
-        if (localStorage && localStorage.length > 0) return
+        if (localStorage.products && localStorage.products.length > 0) return
         await fetch('https://fakestoreapi.com/products')
         .then(function(resolve) {
             return resolve.json()

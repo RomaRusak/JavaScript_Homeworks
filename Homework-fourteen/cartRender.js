@@ -34,6 +34,7 @@ export default class CartRender {
         }
 
         this.cartRender()
+        this.cartLocalStorageStart()
 
     }
 
@@ -46,9 +47,10 @@ export default class CartRender {
         })
 
         this.totalCartUpdate()
-        this.cartRouding() //возможно удалить
+        this.cartRouding() 
         this.cartRenderUpdate()
-        this.activeClassChecking() //возможно удалить
+        this.activeClassChecking() 
+        this.cartLocalStorageSave() //возможно удалить
         return this
     }
 
@@ -62,9 +64,10 @@ export default class CartRender {
         })
 
         this.totalCartUpdate()
-        this.cartRouding() //возможно удалить
+        this.cartRouding() 
         this.cartRenderUpdate()
-        this.activeClassChecking() //возможно удалить
+        this.activeClassChecking() 
+        this.cartLocalStorageSave() //возможно удалить
         return this
     }
 
@@ -114,7 +117,7 @@ export default class CartRender {
         if (symbolsCounter - symbolsAfterDot > 3) {
             cartCheck = +cartCheck
             cartCheck = +cartCheck.toFixed(2)
-            console.log(cartCheck, typeof cartCheck)
+            // console.log(cartCheck, typeof cartCheck)
             this.cart.totalCost = cartCheck
         }
     }
@@ -136,7 +139,7 @@ export default class CartRender {
             cart.classList.remove('active')
         })
 
-        console.log(activeClassArray)
+        // console.log(activeClassArray)
         allCarts.forEach((cart) => {
             let cartId = +cart.dataset['id']
             let check = activeClassArray.indexOf(cartId)
@@ -144,6 +147,32 @@ export default class CartRender {
                 cart.classList.add('active')
             }
         })
+    }
+
+    cartLocalStorageSave() {
+        let cart = JSON.stringify(this.cart)
+        localStorage.setItem('cartSave', cart)
+        console.log(cart)
+    }
+
+    cartLocalStorageStart() {
+        if (!localStorage.cartSave) return;
+        let cart = localStorage.getItem('cartSave');
+        cart = JSON.parse(cart);
+        this.cart = cart;
+        this.cartRenderUpdate();
+
+        let arrForClass = [];
+        this.cart.allProducts.forEach((product) =>  {
+            if (product.counter) {
+               arrForClass.push(product.id)
+            }
+        });
+        
+        let self = this
+        setTimeout(function() {     
+            self.activeClassAdding(arrForClass)
+        },0)
     }
 
 }
