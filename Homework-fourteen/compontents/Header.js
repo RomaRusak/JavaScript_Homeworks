@@ -5,7 +5,7 @@ class Header {
     }
 
     create(elementName,elementClassName) {
-        
+
         let elem = document.createElement(elementName)
 
         elementClassName.forEach((attr) => {

@@ -1,4 +1,4 @@
-import createElement from "./createElement.js"
+import createElement from "./createElement.js";
 
 export default class CartRender {
 
@@ -86,18 +86,23 @@ export default class CartRender {
     }
 
     cartRender() {
-        let cartWrapperUI = createElement('div', [['class', 'cart-wrapper']])
+        let cartWrapperUI = createElement('a', [['class', 'cart-wrapper'], ['href', '#cart']])
         let cartImgUI = createElement('div', [['class','cart-img']])
         let cartCounterUI = createElement('p',[['class', 'cart-counter']],'корзина пуста')
         let costCounterUI = createElement('p', [['class', 'cost-counter']],)
 
         cartWrapperUI.append(cartImgUI,cartCounterUI,costCounterUI)
+
+        if (!document.querySelector('.navClass')) return // вот эта строчка под вопросом
+
         document.querySelector('.navClass').append(cartWrapperUI)
     }
 
     cartRenderUpdate() {
         let cartConteinerUI = document.querySelector('.cart-counter')
         let costConteinerUI = document.querySelector('.cost-counter')
+
+        if (!cartConteinerUI || !costConteinerUI) return // вот эта строчка под вопросом
         
         cartConteinerUI.innerText = `единиц товара: ${this.cart.totalCounter}` 
         costConteinerUI.innerText = `цена: ${this.cart.totalCost}` 

@@ -12,19 +12,49 @@ body {
 .root {
     max-width: 1400px;
     margin: 0 auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .root .header {
     min-height: 150px;
+    height: 150px;
     background-color:  lightgreen;
     margin-bottom: 50px;
 }
+
+.navClass {
+    height: 100%;
+}
+
+.navClass .navlist {
+    max-width: 600px;
+    height: 100%;
+    margin: 0 auto;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navlist li > a {
+    text-decoration: none;
+    font-size: 24px;
+    color: black;
+    font-weight: bold;
+    text-shadow: 0 1px 1px black;
+}
+
 
 .navClass .cart-wrapper {
     height: 200px;
     position: fixed;
     top: 5px;
     right: 20px;
+    text-decoration: none;
+    color: black;
 }
 
 .navClass .cart-img {
@@ -113,3 +143,39 @@ body {
     margin-top: 50px;
 }
 
+.mainClass .cartPage-wrapper {
+    grid-column: 1/4;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.mainClass .cartPage-wrapper .cartPage-inner-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 3px solid black;
+    box-sizing: border-box;
+    padding: 15px;
+    box-shadow: 1px 1px 2px black;
+}
+
+.cartPage-inner-wrapper .cartPageInnerWrapper-productTitle {
+    width: 250px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.cartPageInnerWrapper-totalCounter,
+.cartPageInnerWrapper-totalCost {
+    font-weight: bold;
+}
+
+.cartPageInnerWrapper-buttonPlus,
+.cartPageInnerWrapper-buttonMinus {
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px black;
+}
