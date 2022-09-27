@@ -171,6 +171,14 @@ body {
     font-weight: bold;
 }
 
+.cartPageInnerWrapper-counter {
+    width: 240px;
+}
+
+.cartPageInnerWrapper-cost {
+    width: 240px;
+}
+
 .cartPageInnerWrapper-buttonPlus,
 .cartPageInnerWrapper-buttonMinus {
     padding: 10px 20px;
