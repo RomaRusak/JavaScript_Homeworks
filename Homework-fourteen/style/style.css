@@ -179,3 +179,18 @@ body {
     border-radius: 5px;
     box-shadow: 1px 1px 2px black;
 }
+
+.cartPageInnerWrapper-cartDelete {
+    width: 300px;
+    box-sizing: border-box;
+    font-size: 24px;
+    padding: 10px 25px;
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: 0px 1px 1px black;
+    transition: all .4s;
+}
+
+.cartPageInnerWrapper-cartDelete:hover {
+    background-color: lightsalmon;
+}
