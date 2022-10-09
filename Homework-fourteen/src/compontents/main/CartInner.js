@@ -60,7 +60,7 @@ class Cart {
                 cartPageModaleContainer.append(cartPageModaleText, cartPageModaleButtonContainer);
                 modaleWrapper.append(cartPageModaleContainer);
                 document.querySelector('.main').append(modaleWrapper);
-
+                document.querySelector('.cart-page-wrapper').classList.add('opacity');
 
                 cartPageModaleYes.addEventListener('click', () => {
                     modaleWrapper.remove()
@@ -71,11 +71,13 @@ class Cart {
                     cart.cartTotalPrice.innerHTML = `cost products: ${cart.totalSumCounter} $`;
                     this.render();
                     document.querySelector('body').classList.remove('stopScroll');
+                    document.querySelector('.cart-page-wrapper').classList.remove('opacity');
                 })
                 
                 cartPageModaleNo.addEventListener('click', () => {
                     document.querySelector('body').classList.remove('stopScroll');
-                    modaleWrapper.remove()
+                    modaleWrapper.remove();
+                    document.querySelector('.cart-page-wrapper').classList.remove('opacity');
                 })
                 
             })

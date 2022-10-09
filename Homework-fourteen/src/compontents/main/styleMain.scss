@@ -91,7 +91,6 @@
     z-index: 2;
     background-color: rgba(0,0,0,0.4);
     transition: all .4s;
-    
 
     .modal-container {
         position: relative;
@@ -285,4 +284,9 @@
         
     }
     
+}
+
+.opacity {
+    opacity: .3;
+    transition: .4s;
 }

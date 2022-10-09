@@ -19,6 +19,7 @@ class ProductCard {
 
     render() {
         document.querySelector('body').classList.add('stopScroll');
+        document.querySelector('.catalog-wrapper').classList.add('opacity')
         let modalContainer = createElement('div', [['class', 'modal-container']]);             
         let modalTitle = createElement('h2', [['class','modal-tile']], this.data.title);
         let modalCloseWrapper = createElement('p', [['class', 'modal-close']], 'X');
@@ -27,12 +28,15 @@ class ProductCard {
             main.remove()
             window.location.hash = '#Catalog'
             document.querySelector('body').classList.remove('stopScroll');
+            document.querySelector('.catalog-wrapper').classList.remove('opacity')
         });
         modalCloseWrapper.addEventListener('mouseenter', () => {
             document.querySelector('.modale-wrapper').style.backgroundColor = 'rgba(0,0,0,0.1)';
+            document.querySelector('.opacity').style.opacity = 1;
         });
         modalCloseWrapper.addEventListener('mouseleave', () => {
             document.querySelector('.modale-wrapper').style.backgroundColor = 'rgba(0,0,0,0.4)';
+            document.querySelector('.opacity').style.opacity = .4;
         });
 
         let modalAddWrapper = createElement('div', [['class', 'modal-addToCart-wrapper']]);
