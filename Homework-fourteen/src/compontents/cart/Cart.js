@@ -21,6 +21,10 @@ class Cart {
         this.elem.append(this.cartImg, this.cartTotalcounterText, this.cartTotalPrice);
         this.cartStorage = [];
         this.addTocart = this.addTocart.bind(this)
+        this.localStorageStart = this.localStorageStart.bind(this)
+        window.addEventListener('load', () => {
+            this.localStorageStart()
+        })
     }
 
     addTocart(product) {
@@ -50,6 +54,7 @@ class Cart {
                 this.cartTotalcounterText.innerHTML = `products in cart: ${this.totalCounter}`;
                 this.cartTotalPrice.innerHTML = `cost products: ${this.totalSumCounter} $`;  
                 console.log(this.cartStorage);
+                this.localStorageSave()
             };
         });
 
@@ -80,6 +85,25 @@ class Cart {
         this.cartTotalPrice.innerHTML = `cost products: ${this.totalSumCounter} $`;  
         // this.productIncartInfo()          
         console.log(this.cartStorage);
+        this.localStorageSave()
+    }
+
+    localStorageSave() {
+        if (localStorage.getItem('cartSave')) localStorage.removeItem('cartSave');
+        let storage = JSON.stringify(this.cartStorage)
+        localStorage.setItem('cartSave',storage);
+    }
+
+    localStorageStart() {
+        let storage = JSON.parse(localStorage.getItem('cartSave'));
+        if (storage == null) return;
+        storage.forEach(product => {
+           let counnter = product.counnter
+           for (let i = 0; i < counnter; i++) {
+            this.addTocart(product)
+           }
+        })
+        
     }
 
     removeFromCart(product) {
@@ -124,6 +148,7 @@ class Cart {
                     
                 } 
                 console.log(productStorage)
+                this.localStorageSave()
             } 
         })
     }
@@ -155,10 +180,12 @@ class Cart {
 let cart = new Cart();
 let cartWidget = cart.init();
 let addToCart = cart.addTocart;
+let start = cart.localStorageStart;
 // let productInCartCheck = cart.productIncartInfo
 
 export {cartWidget};
 export {addToCart};
 export {cart};
+export {start}
 // export {productInCartCheck}
 
