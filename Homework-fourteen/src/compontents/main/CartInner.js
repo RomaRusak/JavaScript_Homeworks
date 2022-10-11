@@ -72,6 +72,7 @@ class Cart {
                     this.render();
                     document.querySelector('body').classList.remove('stopScroll');
                     document.querySelector('.cart-page-wrapper').classList.remove('opacity');
+                    localStorage.removeItem('cartSave');
                 })
                 
                 cartPageModaleNo.addEventListener('click', () => {
