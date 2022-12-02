@@ -4,6 +4,7 @@ import style from './nav.module.css'
 
 const Nav = () => {
 
+    const [activeLinkState, setActiveLinkState] = useState('home')
     const [closeMenu, setCloseMenu] = useState(false)
 
     const menuHandler = () => {
@@ -23,10 +24,10 @@ const Nav = () => {
                 <span className={style.burgerMenuItem}></span>
             </div>
                 <ul className={closeMenu ? style.navActive : null}>
-                    <li><Link to={'/'}>Домашняя страница</Link></li>
-                    <li><Link to={'pizzas'}>Пиццы</Link></li>
-                    <li><Link to={'info'}>Информация</Link></li>
-                    <li><Link to={'cart'}>Корзина</Link></li>
+                    <li><Link className={activeLinkState === 'home' ? style.navLink + ' ' + style.activeNavLink : style.navLink} to={'/'} onClick={() => {setActiveLinkState('home')}}>Домашняя страница</Link></li>
+                    <li><Link className={activeLinkState === 'pizzas' ? style.navLink + ' ' + style.activeNavLink : style.navLink} to={'pizzas'} onClick={() => {setActiveLinkState('pizzas')}}>Пиццы</Link></li>
+                    <li><Link className={activeLinkState === 'info' ? style.navLink + ' ' + style.activeNavLink : style.navLink} to={'info'} onClick={() => {setActiveLinkState('info')}}>Информация</Link></li>
+                    <li><Link className={activeLinkState === 'cart' ? style.navLink + ' ' + style.activeNavLink : style.navLink} to={'cart'} onClick={() => {setActiveLinkState('cart')}}>Корзина</Link></li>
                 </ul>
             </div>
         </nav>

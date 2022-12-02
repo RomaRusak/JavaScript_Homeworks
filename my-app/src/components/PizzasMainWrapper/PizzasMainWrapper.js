@@ -8,6 +8,7 @@ import Pagination from '../Pagination/Pagination';
 import SelectSort from '../SelectSort/SelectSort';
 import FilterWrapper from '../FilterWrapper/FilterWrapper';
 import CartWidget from '../CartWidget/CartWidget';
+import style from './pizzasMainWrapper.module.css'
 
 
 const PizzasMainWrapper = () => {
@@ -105,7 +106,7 @@ const PizzasMainWrapper = () => {
 
 
   return (
-    <div className="pizzasMainWrapper">
+    <div className={style.pizzasMainWrapper}>
       <CartWidget />
       <FilterWrapper propsForFilter={propsForFilter}/>
       <PizzaCard data={currentPizza}/>

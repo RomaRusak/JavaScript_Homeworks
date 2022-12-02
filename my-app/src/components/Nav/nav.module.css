@@ -50,6 +50,14 @@
     position: relative;
 }
 
+.navLink {
+    transition: color .3s ease-in-out;
+}
+
+.activeNavLink {
+    color: gold !important;
+}
+
 .nav ul a:after {
     content: "";
     display: block;
@@ -172,12 +180,28 @@
         justify-self: end;
         padding-right: 5px;
     }
+
+    .nav ul {
+        padding-right: 15px;
+    }
 }
 
 @media (max-width:355px) {
     .nav ul a {
         font-size: 13px;
-    }    
+    }
+
+    .nav ul {
+        padding-right: 10px;
+    }
+
+    .burgerMenu {
+        margin-left: 10px;
+    }
+
+    .burgerMenuClose {
+        margin-left: 12px;
+    }
 }
 
 @media (max-width:332px) {

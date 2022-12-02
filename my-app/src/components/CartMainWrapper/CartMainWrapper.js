@@ -1,4 +1,4 @@
-import {animate, AnimatePresence, motion} from 'framer-motion'
+import { AnimatePresence, motion} from 'framer-motion'
 import { useSelector, useDispatch } from "react-redux"
 import addPizzaToCart from "../../action/addPizzaToCart"
 import removePizzaFromCart from "../../action/removePizzaFromCart"

@@ -3,6 +3,8 @@ import Layout from './components/Layout/Layout';
 import PizzasMainWrapper from './components/PizzasMainWrapper/PizzasMainWrapper';
 import CartMainWrapper from './components/CartMainWrapper/CartMainWrapper';
 import InfoMainWrapper from './components/InfoMainWrapper/InfroMainWrapper';
+import InfoVacancy from './components/InfoVacancy/InfoVacancy';
+import InfoOftenQuestions from './components/InfoOftenQuestions/InfoOftenQuestions';
 import './App.css';
 
 function App() {
@@ -13,7 +15,10 @@ function App() {
             <Route path="/" element={<Layout />}>
               <Route path='pizzas' element={<PizzasMainWrapper />}></Route>
               <Route path='cart' element={<CartMainWrapper/>}></Route>
-              <Route path='info' element={<InfoMainWrapper/>}></Route>
+              <Route path='info' element={<InfoMainWrapper/>}>
+                <Route index element={<InfoOftenQuestions />}></Route>
+                <Route path='vacancy' element={<InfoVacancy />}></Route>
+              </Route>
             </Route>
           </Routes>
       </BrowserRouter>

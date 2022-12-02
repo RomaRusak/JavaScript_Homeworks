@@ -1,13 +1,15 @@
-import InfoAccordion from "../InfoAccordion/InfoAccordion"
+import { Outlet } from "react-router-dom"
 import CartWidget from "../CartWidget/CartWidget"
+import NavInfo from "../NavInfo/NavInfo"
+import style from './infoMainWrapper.module.css'
 
 const InfoMainWrapper = () => {
 
     return (
-        <div>
+        <div className={style.infoMainWrapper}>
             <CartWidget />
-            <h2>Инфо блок главная страница</h2>
-            <InfoAccordion />
+            <NavInfo />
+            <Outlet />
         </div>
     )
 }
