@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import {motion} from 'framer-motion'
 import style from './orderingWrapper.module.css';
 
 const OrderingWrapper = () => {
@@ -195,6 +196,11 @@ const OrderingWrapper = () => {
               </div>
             </div>
           </div>
+        </div>
+        <div className={style.buttonPayWrapper}>
+          <motion.button className={style.buttonPay} initial={{x: 50, opacity: 0}} whileInView={{x: 0, opacity: 1}} transition={{duration: .2}} viewport={{amount: .2, once: true}}>
+            Оплатить
+          </motion.button>
         </div>
       </div>
     </div>

@@ -1,8 +1,10 @@
 import { combineReducers } from "redux";
 import pizza from './pizza'
+import nav from "./nav";
 
 const reducers = combineReducers({
-    pizza
+    pizza,
+    nav
 })
 
 export default reducers

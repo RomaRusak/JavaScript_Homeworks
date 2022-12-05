@@ -1,10 +1,19 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import style from './nav.module.css';
+import setNav from '../../action/setNav';
+import { useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 
 const Nav = () => {
   const [activeLinkState, setActiveLinkState] = useState('home');
   const [closeMenu, setCloseMenu] = useState(false);
+  const dispatch = useDispatch();
+  const data = useSelector((state) => state.nav.state);
+
+  useEffect(() => {
+    setActiveLinkState(data)
+  }, [])
 
   const menuHandler = () => {
     setCloseMenu(!closeMenu);
@@ -35,6 +44,7 @@ const Nav = () => {
               }
               to={'/'}
               onClick={() => {
+                dispatch(setNav('home'))
                 setActiveLinkState('home');
               }}
             >
@@ -51,6 +61,7 @@ const Nav = () => {
               }
               to={'info'}
               onClick={() => {
+                dispatch(setNav('info'))
                 setActiveLinkState('info');
               }}
             >
@@ -66,6 +77,7 @@ const Nav = () => {
               }
               to={'cart'}
               onClick={() => {
+                dispatch(setNav('cart'))
                 setActiveLinkState('cart');
               }}
             >
