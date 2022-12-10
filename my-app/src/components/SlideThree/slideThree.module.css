@@ -1,0 +1,5 @@
+.sliderItem {
+    min-width: 100%;
+    transition: all .5s ease-in-out;
+    background-image: url('https://i.pinimg.com/474x/a3/21/42/a3214283e99116df611d0be13c41c550.jpg');
+}
