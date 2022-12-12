@@ -10,7 +10,7 @@ const InfoPromotions = () => {
         className={style.infoPromotionsWrapper}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-      > 
+      >
         <h2 className={style.infoPromotionsTitle}>Наши акции:</h2>
         <SliderWrapper />
         <DeliveryCondition />

@@ -18,6 +18,7 @@ const PizzaCardModal = ({ modalId, closeModal }) => {
   const dispatch = useDispatch();
 
   const addToCart = () => {
+    closeModal()
     switch (pizzaSizeValue) {
       case 'small':
         return dispatch(

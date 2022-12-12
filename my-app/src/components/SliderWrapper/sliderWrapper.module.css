@@ -9,6 +9,7 @@
     height: 100%;
     display: flex;
     overflow: hidden;
+    box-shadow: 1px 2px 4px black;
 }
 
 .sliderItem {
